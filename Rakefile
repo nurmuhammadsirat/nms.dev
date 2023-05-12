@@ -24,7 +24,7 @@ task :new, [:title] do |t, args|
   quit "Unable to create a draft without a title" if title.nil? || title.empty?
 
   draft_file = "_drafts/#{normalize_title_to_file_name(title)}.md"
-  quit "A draft already exists with that title" if File.exists?(draft_file)
+  quit "A draft already exists with that title" if File.exist?(draft_file)
 
   timestamp = Time.now.strftime('%Y-%m-%d %H:%M')
   asset_path = create_asset_folder_for title
@@ -47,7 +47,7 @@ task :new_post, [:title] do |t, args|
   datetimestamp = Time.now.strftime('%Y-%m-%d %H:%M')
   datestamp = datetimestamp.split(' ').first
   post_file = "_posts/#{datestamp}-#{normalize_title_to_file_name(title)}.md"
-  quit "A post already exists with that title" if File.exists?(post_file)
+  quit "A post already exists with that title" if File.exist?(post_file)
 
   asset_path = create_asset_folder_for title
   File.open(post_file, 'w') do |fh|
@@ -67,7 +67,7 @@ task :convert, [:title] do |t, args|
   quit "Unable to find a draft without a title" if title.nil? || title.empty?
 
   draft_file = "#{normalize_title_to_file_name(title)}.md"
-  quit "Unable to find a draft with that title: #{title}" unless File.exists?("_drafts/#{draft_file}")
+  quit "Unable to find a draft with that title: #{title}" unless File.exist?("_drafts/#{draft_file}")
 
   datetimestamp = Time.now.strftime('%Y-%m-%d %H:%M')
   datestamp = datetimestamp.split(' ').first
