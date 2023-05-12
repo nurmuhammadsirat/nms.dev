@@ -1,13 +1,13 @@
 # Site Info
-title:              "Quantized Ramblings"
-description:        "A Blog of Nur Muhammad Bin Sirat"
+title:              "nms. dev."
+description:        "Ramblings quantized"
 google_verify:      "" # Put your Google Verification here
 google_analytics:   "UA-4751764-5" # Put your Google Analytics code
 
 # Author Info
 author_name:        "Nur Muhammad Bin Sirat" # Your name here
 author_email:       mat.ace@gmail.com # Your email here
-author_gravatar:    "" # Your Gravatar md5 hash here for logo
+author_gravatar:    "280e4016d89072cc704ec068597c0f15" # Your Gravatar md5 hash here for logo
 twitter_username:   "" # Your Twitter username here
 github_username:    nurmuhammadsirat # Your GitHub username here
 
